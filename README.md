@@ -317,7 +317,7 @@ if you have inserted backend deployed link in frontend then above step is not ne
 ### Step 5 — Configure GitHub Webhook
 
 1. Go to your GitHub repo → Settings → Webhooks → Add webhook
-2. Payload URL: `https://your-ngrok-url/api/github/webhook` or `https://playhouse-overtime-mutate.ngrok-free.dev/api/github/webhook`
+2. Payload URL: `https://your-ngrok-url/api/github/webhook` or `https://coral-hackathon-production.up.railway.app/api/github/webhook`
 3. Content type: `application/json`
 4. Events: select **Pull requests** only
 5. Click Add webhook
