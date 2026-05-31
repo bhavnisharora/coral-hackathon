@@ -20,7 +20,18 @@ export default function Home() {
         zIndex: 50
       }}>
         <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-          <span style={{ fontSize: "22px" }}>🪸</span>
+          <div style={{
+            width: "32px", height: "32px", borderRadius: "8px",
+            background: "linear-gradient(135deg, #388bfd, #a371f7)",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            boxShadow: "0 0 12px #388bfd55", flexShrink: 0
+          }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <circle cx="11" cy="11" r="7" />
+              <path d="M21 21l-4.35-4.35" />
+              <path d="M11 8v6M8 11h6" />
+            </svg>
+          </div>
           <span style={{ fontWeight: 700, fontSize: "18px", color: "var(--text-primary)", letterSpacing: "-0.3px" }}>
             Bug Pilot
           </span>
@@ -51,7 +62,7 @@ export default function Home() {
       <main style={{ maxWidth: "1280px", margin: "0 auto", padding: "32px 24px" }}>
         {/* Header */}
         <div style={{ marginBottom: "32px" }}>
-          <h1 style={{
+          {/* <h1 style={{
             fontSize: "28px",
             fontWeight: 700,
             color: "var(--text-primary)",
@@ -59,7 +70,7 @@ export default function Home() {
             marginBottom: "6px"
           }}>
             Bug Pilot Dashboard
-          </h1>
+          </h1> */}
           <p style={{ color: "var(--text-secondary)", fontSize: "14px" }}>
             AI analyzes recently merged PRs and pinpoints which one introduced the bug.
           </p>

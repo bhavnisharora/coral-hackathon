@@ -122,15 +122,29 @@ const BugAnalyzer = () => {
       }}
         onClick={() => setUseCoral(!useCoral)}
       >
-        <input
-          type="checkbox"
-          checked={useCoral}
-          onChange={() => setUseCoral(!useCoral)}
-          style={{ cursor: "pointer", accentColor: "#a371f7" }}
-        />
+        <div style={{
+          width: "22px", height: "22px", borderRadius: "6px", flexShrink: 0,
+          background: useCoral ? "linear-gradient(135deg, #a371f7, #388bfd)" : "var(--bg-card)",
+          border: `1px solid ${useCoral ? "#a371f7" : "var(--border)"}`,
+          display: "flex", alignItems: "center", justifyContent: "center",
+          transition: "all 0.2s", boxShadow: useCoral ? "0 0 8px #a371f755" : "none"
+        }}>
+          {useCoral && (
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+          )}
+        </div>
         <div>
-          <div style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-primary)" }}>
-            🪸 Use Coral Query Engine
+          <div style={{ fontSize: "13px", fontWeight: 600, color: "var(--text-primary)", display: "flex", alignItems: "center", gap: "6px" }}>
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke={useCoral ? "#a371f7" : "var(--text-secondary)"} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transition: "stroke 0.2s" }}>
+              <path d="M12 22V12" />
+              <path d="M12 12C12 8 8 6 8 3" />
+              <path d="M12 12C12 8 16 6 16 3" />
+              <path d="M8 12C8 9 5 8 5 5" />
+              <path d="M16 12C16 9 19 8 19 5" />
+            </svg>
+            Use Coral Query Engine
           </div>
           <div style={{ fontSize: "11px", color: "var(--text-secondary)", marginTop: "2px" }}>
             Semantic search across GitHub + Jira + Slack (real-time data)
