@@ -261,6 +261,12 @@ SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxx/yyy/zzz
 
 # Use forward slashes on Windows
 CORAL_PATH=C:/Users/YourName/.local/bin/coral
+
+
+# if you dont want to perform the above steps then paste the backend deployed link in frotend .env file
+
+## NEXT_PUBLIC_API_URL=https://coral-hackathon-production.up.railway.app/api
+
 ```
 
 ---
@@ -277,6 +283,8 @@ Expected output:
 ```
 MongoDB Connected
 Server Running on Port 5000
+
+if you have inserted backend deployed link then above step is not needed
 ```
 
 ---
@@ -302,12 +310,14 @@ ngrok http 5000
 
 Copy the `https://abc123.ngrok-free.app` URL.
 
+
+if you have inserted backend deployed link in frontend then above step is not needed
 ---
 
 ### Step 5 — Configure GitHub Webhook
 
 1. Go to your GitHub repo → Settings → Webhooks → Add webhook
-2. Payload URL: `https://your-ngrok-url/api/github/webhook`
+2. Payload URL: `https://your-ngrok-url/api/github/webhook` or `https://playhouse-overtime-mutate.ngrok-free.dev/api/github/webhook`
 3. Content type: `application/json`
 4. Events: select **Pull requests** only
 5. Click Add webhook
