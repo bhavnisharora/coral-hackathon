@@ -13,15 +13,15 @@ const cards = (stats) => [
     glow: "#388bfd22",
     border: "#388bfd33"
   },
-  {
-    title: "Bug Analyses Run",
-    value: stats.incidents,
-    icon: "◈",
-    gradient: "linear-gradient(135deg, #1c2333 0%, #1e1a2e 100%)",
-    accent: "#a371f7",
-    glow: "#a371f722",
-    border: "#a371f733"
-  },
+  // {
+  //   title: "Bug Analyses Run",
+  //   value: stats.incidents,
+  //   icon: "◈",
+  //   gradient: "linear-gradient(135deg, #1c2333 0%, #1e1a2e 100%)",
+  //   accent: "#a371f7",
+  //   glow: "#a371f722",
+  //   border: "#a371f733"
+  // },
   {
     title: "High Risk PRs",
     value: stats.highRiskPRs,
