@@ -115,7 +115,7 @@ export const analyzeIncidentWithCoral = async (req, res) => {
     // Step 5: Send Slack alert
     if (aiResult.suspectedPRs.length > 0) {
       const top = aiResult.suspectedPRs[0];
-      const slackMsg = `🪸 *Coral-Powered Bug Triage Alert*\n*Bug:* ${bugDescription}\n\n*Top Suspect:* PR #${top.prId} by ${top.author} (${top.confidence}% confidence)\n*Files:* ${top.files.join(", ")}\n*Jira:* ${top.jiraTicket || "N/A"}\n*Reason:* ${top.reason}`;
+      const slackMsg = `🪸 *Coral-Powered Bug Triage Alert*\n*Bug:* ${bugDescription}\n\n*Top Suspect:* PR #${top.prId} by ${top.author} (${top.confidence}% confidence)\n*Files:* ${top.files.join(", ")}\n*Reason:* ${top.reason}`;
       await sendSlackAlert(slackMsg).catch(e => console.log("Slack error:", e.message));
     }
 
